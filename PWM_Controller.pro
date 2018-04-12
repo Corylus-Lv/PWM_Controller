@@ -1,4 +1,4 @@
-update=2018/04/11 16:43:14
+update=2018/04/12 16:10:13
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,6 +62,6 @@ LibName30=atmel
 LibName31=contrib
 LibName32=valves
 LibName33=DIR9001
-LibName34=EC12PLGRSDVF
-LibName35=TAS5086
-LibName36=XOSC
+LibName34=TAS5086
+LibName35=XOSC
+LibName36=EC12P
