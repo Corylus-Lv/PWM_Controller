@@ -446,12 +446,12 @@ $EndComp
 $Comp
 L GND #PWR15
 U 1 1 5ACDBE9D
-P 4050 7350
-F 0 "#PWR15" H 4050 7100 50  0001 C CNN
-F 1 "GND" H 4050 7200 50  0000 C CNN
-F 2 "" H 4050 7350 50  0001 C CNN
-F 3 "" H 4050 7350 50  0001 C CNN
-	1    4050 7350
+P 4950 6550
+F 0 "#PWR15" H 4950 6300 50  0001 C CNN
+F 1 "GND" H 4950 6400 50  0000 C CNN
+F 2 "" H 4950 6550 50  0001 C CNN
+F 3 "" H 4950 6550 50  0001 C CNN
+	1    4950 6550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -494,7 +494,7 @@ Text GLabel 1950 7100 0    50   Input ~ 0
 SDA
 Text GLabel 1950 7200 0    50   Input ~ 0
 SLC
-Text GLabel 4350 7300 2    50   Output ~ 0
+Text GLabel 4350 7400 2    50   Output ~ 0
 SCLK
 Text GLabel 4350 6700 2    50   Input ~ 0
 SDIN1
@@ -554,10 +554,6 @@ Wire Wire Line
 Wire Wire Line
 	2550 4150 2750 4150
 Wire Wire Line
-	3950 7300 4150 7300
-Wire Wire Line
-	4150 7300 4350 7300
-Wire Wire Line
 	2450 4050 2450 4650
 Wire Wire Line
 	2450 4050 2750 4050
@@ -566,7 +562,9 @@ Wire Wire Line
 Wire Wire Line
 	2350 7300 2650 7300
 Wire Wire Line
-	2350 7300 2350 3950
+	2350 3950 2350 7300
+Wire Wire Line
+	2350 7300 2350 7500
 Wire Wire Line
 	2350 3950 2750 3950
 Wire Wire Line
@@ -849,17 +847,7 @@ Connection ~ 900  6500
 Wire Wire Line
 	4050 7200 3950 7200
 Wire Wire Line
-	4050 6400 4050 6500
-Wire Wire Line
-	4050 6500 4050 7200
-Wire Wire Line
-	4050 7200 4050 7350
-Wire Wire Line
 	3950 6400 4050 6400
-Connection ~ 4050 7200
-Wire Wire Line
-	3950 6500 4050 6500
-Connection ~ 4050 6500
 Wire Wire Line
 	3850 5150 3850 5100
 Wire Wire Line
@@ -889,23 +877,23 @@ Wire Wire Line
 Wire Wire Line
 	1950 7200 2650 7200
 Wire Wire Line
-	5750 6900 3950 6900
+	5050 6900 3950 6900
 Wire Wire Line
-	5750 7100 3950 7100
+	5050 7100 3950 7100
 Wire Wire Line
-	5400 5500 3950 5500
+	5050 5500 3950 5500
 Wire Wire Line
-	5400 5600 3950 5600
+	5050 5600 3950 5600
 Wire Wire Line
-	5400 5700 3950 5700
+	5050 5700 3950 5700
 Wire Wire Line
-	5400 5800 3950 5800
+	5050 5800 3950 5800
 Wire Wire Line
-	5400 5900 3950 5900
+	5050 5900 3950 5900
 Wire Wire Line
-	5400 6000 3950 6000
+	5050 6000 3950 6000
 Wire Wire Line
-	5750 7000 3950 7000
+	5050 7000 3950 7000
 Text GLabel 2650 4550 2    50   Output ~ 0
 DOUT
 Wire Wire Line
@@ -1307,13 +1295,18 @@ Wire Wire Line
 Wire Wire Line
 	2450 4650 4150 4650
 Wire Wire Line
-	4150 4650 4150 7300
-Connection ~ 4150 7300
+	4150 4650 4150 7200
+Wire Wire Line
+	4150 7200 4150 7300
+Wire Wire Line
+	4150 7300 4150 7400
 Text GLabel 1950 7300 0    50   Output ~ 0
 LRCLK
 Connection ~ 2350 7300
 Wire Wire Line
-	2250 6200 2250 3350
+	2250 3350 2250 6200
+Wire Wire Line
+	2250 6200 2250 7600
 Text GLabel 1950 6200 0    50   Output ~ 0
 MCLK
 Connection ~ 2250 6200
@@ -1888,63 +1881,51 @@ Wire Wire Line
 $Comp
 L Conn_01x07 J2
 U 1 1 5ACDBED4
-P 5600 5800
-F 0 "J2" H 5600 6200 50  0000 C CNN
-F 1 "Conn_01x07" H 5600 5400 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x07_Pitch2.54mm" H 5600 5800 50  0001 C CNN
-F 3 "" H 5600 5800 50  0001 C CNN
-	1    5600 5800
+P 5250 5800
+F 0 "J2" H 5250 6200 50  0000 C CNN
+F 1 "Conn_01x07" H 5250 5400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x07_Pitch2.54mm" H 5250 5800 50  0001 C CNN
+F 3 "" H 5250 5800 50  0001 C CNN
+	1    5250 5800
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR21
 U 1 1 5ACDBED5
-P 5300 6200
-F 0 "#PWR21" H 5300 5950 50  0001 C CNN
-F 1 "GND" H 5300 6050 50  0000 C CNN
-F 2 "" H 5300 6200 50  0001 C CNN
-F 3 "" H 5300 6200 50  0001 C CNN
-	1    5300 6200
+P 4950 6200
+F 0 "#PWR21" H 4950 5950 50  0001 C CNN
+F 1 "GND" H 4950 6050 50  0000 C CNN
+F 2 "" H 4950 6200 50  0001 C CNN
+F 3 "" H 4950 6200 50  0001 C CNN
+	1    4950 6200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5300 6200 5300 6100
+	4950 6200 4950 6100
 Wire Wire Line
-	5300 6100 5400 6100
+	4950 6100 5050 6100
 $Comp
 L Conn_01x07 J3
 U 1 1 5ACDBED6
-P 5950 7200
-F 0 "J3" H 5950 7600 50  0000 C CNN
-F 1 "Conn_01x07" H 5950 6800 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x07_Pitch2.54mm" H 5950 7200 50  0001 C CNN
-F 3 "" H 5950 7200 50  0001 C CNN
-	1    5950 7200
+P 5250 7200
+F 0 "J3" H 5250 7600 50  0000 C CNN
+F 1 "Conn_01x07" H 5250 6800 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x07_Pitch2.54mm" H 5250 7200 50  0001 C CNN
+F 3 "" H 5250 7200 50  0001 C CNN
+	1    5250 7200
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR24
 U 1 1 5ACDBED7
-P 5650 7600
-F 0 "#PWR24" H 5650 7350 50  0001 C CNN
-F 1 "GND" H 5650 7450 50  0000 C CNN
-F 2 "" H 5650 7600 50  0001 C CNN
-F 3 "" H 5650 7600 50  0001 C CNN
-	1    5650 7600
+P 4950 7600
+F 0 "#PWR24" H 4950 7350 50  0001 C CNN
+F 1 "GND" H 4950 7450 50  0000 C CNN
+F 2 "" H 4950 7600 50  0001 C CNN
+F 3 "" H 4950 7600 50  0001 C CNN
+	1    4950 7600
 	1    0    0    -1  
 $EndComp
-Text GLabel 5600 7200 0    50   Input ~ 0
-SCLK
-Text GLabel 5600 7300 0    50   Input ~ 0
-LRCLK
-Text GLabel 5600 7400 0    50   Input ~ 0
-MCLK
-Wire Wire Line
-	5600 7200 5750 7200
-Wire Wire Line
-	5750 7300 5600 7300
-Wire Wire Line
-	5750 7400 5600 7400
 $Comp
 L Conn_01x03 J5
 U 1 1 5ACDBED8
@@ -1980,36 +1961,36 @@ Wire Wire Line
 Wire Wire Line
 	7550 3750 7550 3850
 Wire Wire Line
-	5650 7600 5650 7500
+	4950 7600 4950 7500
 Wire Wire Line
-	5650 7500 5750 7500
-Text Notes 6050 6950 0    60   ~ 0
+	4950 7500 5050 7500
+Text Notes 5350 6950 0    60   ~ 0
 SDIN3
-Text Notes 6050 7050 0    60   ~ 0
+Text Notes 5350 7050 0    60   ~ 0
 SDIN4
-Text Notes 6050 7150 0    60   ~ 0
+Text Notes 5350 7150 0    60   ~ 0
 SDOUT
-Text Notes 6050 7250 0    60   ~ 0
+Text Notes 5350 7250 0    60   ~ 0
 SCLK
-Text Notes 6050 7350 0    60   ~ 0
+Text Notes 5350 7350 0    60   ~ 0
 LRCLK
-Text Notes 6050 7450 0    60   ~ 0
+Text Notes 5350 7450 0    60   ~ 0
 MCLK
-Text Notes 6050 7550 0    60   ~ 0
+Text Notes 5350 7550 0    60   ~ 0
 GND
-Text Notes 5700 5550 0    60   ~ 0
+Text Notes 5350 5550 0    60   ~ 0
 PWM1
-Text Notes 5700 5650 0    60   ~ 0
+Text Notes 5350 5650 0    60   ~ 0
 PWM2
-Text Notes 5700 5750 0    60   ~ 0
+Text Notes 5350 5750 0    60   ~ 0
 PWM3
-Text Notes 5700 5850 0    60   ~ 0
+Text Notes 5350 5850 0    60   ~ 0
 PWM4
-Text Notes 5700 5950 0    60   ~ 0
+Text Notes 5350 5950 0    60   ~ 0
 PWM5
-Text Notes 5700 6050 0    60   ~ 0
+Text Notes 5350 6050 0    60   ~ 0
 PWM6
-Text Notes 5700 6150 0    60   ~ 0
+Text Notes 5350 6150 0    60   ~ 0
 GND
 Text Notes 5000 4600 0    60   ~ 0
 RXIN
@@ -2075,4 +2056,35 @@ F 3 "" H 9950 4060 50  0001 C CNN
 	1    10050 3800
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4150 7200 5050 7200
+Wire Wire Line
+	4050 6400 4050 6500
+Wire Wire Line
+	4050 6500 4050 7200
+Wire Wire Line
+	3950 6500 4050 6500
+Wire Wire Line
+	4050 6500 4950 6500
+Wire Wire Line
+	4950 6500 4950 6550
+Connection ~ 4050 6500
+Wire Wire Line
+	5050 7300 4750 7300
+Wire Wire Line
+	4750 7300 4750 7500
+Wire Wire Line
+	4750 7500 2350 7500
+Wire Wire Line
+	2250 7600 4850 7600
+Wire Wire Line
+	4850 7600 4850 7400
+Wire Wire Line
+	4850 7400 5050 7400
+Wire Wire Line
+	4150 7300 3950 7300
+Connection ~ 4150 7200
+Wire Wire Line
+	4150 7400 4350 7400
+Connection ~ 4150 7300
 $EndSCHEMATC
